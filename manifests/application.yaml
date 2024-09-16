@@ -27,11 +27,9 @@ metadata:
   name: wil42-playground-service
   namespace: dev
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: wil42-playground
   ports:
-  - protocol: TCP
-    port: 8888
+  - port: 8888
     targetPort: 8888
-    nodePort: 8888
